@@ -40,7 +40,8 @@ while True:
         break
 
 # 結束錄音
-sd.wait()
+#sd.wait()
+sd.stop()
 write('output.wav', fs, myrecording)
 
 # 釋放影片寫入器，關閉 OpenCV 視窗
