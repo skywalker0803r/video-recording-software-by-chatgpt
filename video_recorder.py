@@ -6,7 +6,6 @@ from scipy.io.wavfile import write
 
 # 設定錄音參數
 fs = 44100  # 取樣頻率
-seconds = 10  # 持續錄音的秒數
 
 # 創建 OpenCV 視窗
 cv2.namedWindow('screen', cv2.WINDOW_NORMAL)
@@ -23,7 +22,7 @@ video = cv2.VideoWriter('test.avi', fourcc, 25, (width, height))
 
 # 開始錄音
 print("Start recording...")
-myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+myrecording = sd.rec(int(np.inf), samplerate=fs, channels=2)
 
 while True:
     # 獲取螢幕畫面
