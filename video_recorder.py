@@ -22,7 +22,7 @@ video = cv2.VideoWriter('test.avi', fourcc, 25, (width, height))
 
 # 開始錄音
 print("Start recording...")
-myrecording = sd.rec(int(60*60*6), samplerate=fs, channels=2)#最多錄製六小時
+myrecording = sd.rec(int(25*60*60*6), samplerate=fs, channels=2)#1秒鐘25偵*60秒*60分鐘*6小時
 
 while True:
     # 獲取螢幕畫面
@@ -40,7 +40,7 @@ while True:
         break
 
 # 結束錄音
-#sd.wait()
+sd.wait()
 sd.stop()
 write('output.wav', fs, myrecording)
 
